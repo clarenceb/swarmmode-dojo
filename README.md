@@ -528,9 +528,9 @@ Docker Compose is a useful tool for development purposes but not a good choice f
 * Docker Compose [does not support working with the new Docker swarm mode](http://stackoverflow.com/questions/38353959/docker-compose-with-docker-1-12-swarm-mode).
 * You can use Compose with the the old Docker Swarm implementation to deploy into a multi-host environment; or
 * You can use the new `docker-compose build` command to create a DAB then `docker stack deploy` to deploy the application stack into a Docker swarm mode cluster (note: experimental features)
-* However, for microservices you probably would not want to deploy a whole application stack together in one go; you would deploy/upgrade each service/part independently*****
+* However, for microservices you probably would not want to deploy a whole application stack together in one go; you would deploy/upgrade each service/part independently\*
 
-(*****) Technically, this is possible with Compose but services are a client-side concept not a server-side concept pre-swarm-mode:
+(\*) Technically, this is possible with Compose but services are a client-side concept not a server-side concept pre-swarm-mode:
 
 ```sh
 docker-compose build <pseudo_service>
@@ -540,12 +540,12 @@ docker-compose up --no-deps -d <pseudo_service>
 Next Steps
 ----------
 
-Try out and read through the Swarm Tutorial [2](https://docs.docker.com/engine/swarm/swarm-tutorial/) (which this dojo is based upon).
+Try out and read through the Swarm Tutorial [[2]](https://docs.docker.com/engine/swarm/swarm-tutorial/) (which this dojo is based upon).
 
 Investigate DABs ([Distributed Application Bundles](https://blog.docker.com/2016/06/docker-app-bundle/)) which are an experimental feature in Docker 1.12.
 
 References/Credits:
 -------------------
 
-[1] [Swarm mode overview](https://docs.docker.com/engine/swarm) -- more detailed info on Swarm mode can be found here.
-[2] [Swarm mode tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/) -- much of the material in this dojo comes from the work described here.
+* [1] [Swarm mode overview](https://docs.docker.com/engine/swarm) -- more detailed info on Swarm mode can be found here.
+* [2] [Swarm mode tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/) -- much of the material in this dojo comes from the work described here.
